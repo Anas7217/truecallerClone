@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Box, ChakraProvider, Stack } from '@chakra-ui/react';
+import Navbar from "./NavScrollExample"
+import ControlledCarousel from './ControlledCarousel';
+import ExploreDesign from './ExploreDesign';
+import Generate from './Generate';
+import ManageDaily from './ManageDaily';
+import TechCrunch from './components/TechCrunch';
+import WhatWe from './components/WhatWe';
+import TrustYour from './components/TrustYour';
+import Iphone from './components/Iphone';
+import Impact from './components/Impact';
+import LatestArticles from './components/LatestArticles';
+import DownloadToday from './components/DownloadToday';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <ChakraProvider>
+      <Box>
+        <Stack>
+          <Navbar />
+          <ControlledCarousel />
+          {/* <ExploreDesign />
+          <Generate />
+          <ManageDaily/> */}
+          <TechCrunch />
+          <WhatWe />
+          <TrustYour />
+          <Iphone />
+          <Impact />
+          <LatestArticles/>
+          <DownloadToday />
+          <Footer />
+         
+        </Stack> 
+      </Box>
+    // </ChakraProvider>
+
   );
 }
 
